@@ -1,0 +1,803 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url(../assets/fonts/Gilroy-Medium.ttf), url(../assets/fonts/Gilroy-Bold.ttf), url(../assets/fonts/Gilroy-Heavy.ttf);
+}
+:root {
+  font-family: "Gilroy";
+}
+
+/* 
+ *
+ *
+*/
+/* z-index  */
+/* opacity  */
+/* Variables header  */
+/* Calculo de pixeles a rem*/
+p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+h1 {
+  line-height: 2rem;
+  font-size: 2rem;
+  margin-bottom: 0rem;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: white;
+}
+
+h4 {
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  margin-top: 0rem;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+body {
+  background-color: #030328;
+  margin: 0;
+}
+
+button {
+  font-family: "Gilroy";
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.5;
+  padding: 0.55em 1.5em 0.5em;
+  vertical-align: middle;
+  border-radius: 50rem;
+}
+
+small {
+  vertical-align: super;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.o-header {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 90;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+.o-header__logo {
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  width: 160px;
+  height: 27px;
+}
+.o-header__subscription {
+  background-color: rgb(181, 53, 246);
+  color: white;
+  border: 2px solid transparent;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+.o-header__login {
+  background: none;
+  border-color: rgba(0, 0, 0, 0);
+  color: rgb(248, 249, 250);
+}
+
+.o-footer {
+  padding: 3rem 0rem;
+  display: flex;
+  flex-direction: column;
+}
+.o-footer__nav {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1140px;
+}
+@media (max-width: 1024px) {
+  .o-footer__nav {
+    max-width: 540px;
+  }
+}
+.o-footer__nav ol {
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+  color: #9e86ff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  padding: 0px;
+}
+.o-footer__nav li {
+  padding: 1em 1.5em;
+}
+.o-footer__copyright p {
+  color: #9e86ff;
+  text-align: center;
+  font-size: 60%;
+  margin-top: 0;
+}
+
+.o-bigImage-mobile {
+  background-image: url(../assets/img/opt_HOTD_keyart_mobile_NEW_0.jpg);
+  padding-top: 53px;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+@media (min-width: 1025px) {
+  .o-bigImage-mobile {
+    display: none;
+  }
+}
+@media (max-width: 575px) {
+  .o-bigImage-mobile {
+    background-size: contain;
+  }
+}
+.o-bigImage-mobile::before {
+  background-image: linear-gradient(0deg, rgb(3, 3, 40) 30%, rgba(3, 3, 40, 0) 50%);
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+.o-bigImage-mobile__box {
+  display: flex;
+  justify-content: center;
+}
+.o-bigImage-mobile__content {
+  display: flex;
+  flex-direction: column-reverse;
+  z-index: 1;
+}
+.o-bigImage-mobile__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.o-bigImage-mobile__main h1 {
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+}
+.o-bigImage-mobile__main img {
+  max-width: 500px;
+  margin-top: 70vw;
+}
+@media (max-width: 575px) {
+  .o-bigImage-mobile__main img {
+    max-width: 100%;
+  }
+}
+.o-bigImage-mobile__main .btn-main {
+  width: 300px;
+}
+.o-bigImage-mobile__price_month h2 {
+  line-height: 0.8em;
+  font-size: 2.2rem;
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+.o-bigImage-mobile__price_month h3 {
+  margin-top: 0em;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  color: white;
+}
+.o-bigImage-mobile__price_anual h2 {
+  line-height: 0.8em;
+  font-size: 2.2rem;
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+.o-bigImage-mobile__price_anual h3 {
+  margin-top: 0em;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  color: white;
+}
+
+@media (max-width: 575px) {
+  .box_main-mobile img {
+    width: 100%;
+  }
+  .content_banner img {
+    max-width: 200px;
+  }
+  .content_banner {
+    padding: 2em 0;
+    margin-top: 36vh;
+  }
+}
+.o-bigImage {
+  background-image: url(../assets/img/opt_HOTD_desktop_keyart_bigger_2000x1280.webp);
+  padding-top: 53px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .o-bigImage {
+    display: none;
+  }
+}
+.o-bigImage::before {
+  bottom: 0;
+  height: 60vh;
+  top: initial;
+  background: linear-gradient(to top, #030328 10%, rgba(0, 0, 0, 0) 100%);
+  content: "";
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+.o-bigImage__box {
+  display: flex;
+  justify-content: center;
+}
+.o-bigImage__content {
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.o-bigImage__main {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  align-self: end;
+  justify-self: start;
+  justify-content: center;
+  column-gap: 2rem;
+  width: 100%;
+  z-index: 1;
+  padding-bottom: 1rem;
+}
+.o-bigImage__imgtitle {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+}
+.o-bigImage__imgtitle img {
+  max-width: 400px;
+}
+.o-bigImage__titlemain {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  align-self: center;
+}
+.o-bigImage__titlemain h1 {
+  margin-top: 15px;
+}
+.o-bigImage__price_month h2 {
+  font-size: 1.7rem;
+  font-weight: bolder;
+  color: white;
+  margin-bottom: 0px;
+  margin-top: 16px;
+}
+.o-bigImage__price_month h3 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-top: 0rem;
+  margin-bottom: 0.8rem;
+}
+.o-bigImage__price_anual h2 {
+  font-size: 1.7rem;
+  color: white;
+  margin-bottom: 0px;
+  margin-top: 16px;
+}
+.o-bigImage__price_anual h3 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-top: 0rem;
+  margin-bottom: 0.8rem;
+}
+.o-bigImage__text-info {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin-top: 0rem;
+}
+.o-bigImage__text-info p {
+  color: #bbbbbb;
+  line-height: 1.4em;
+  font-size: 10px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: 0px 0px 16px 0px;
+}
+
+.o-banner {
+  background-image: url(../assets/img/desktop_1.webp);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .o-banner {
+    background-color: #000;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../assets/img/mobile.webp);
+  }
+}
+@media (max-width: 575px) {
+  .o-banner {
+    background-size: contain;
+  }
+}
+.o-banner__box {
+  padding: 1rem;
+  flex-direction: row-reverse;
+  display: flex;
+  max-width: 1140px;
+}
+@media (max-width: 1024px) {
+  .o-banner__box {
+    padding: 4rem;
+    flex-direction: column;
+  }
+}
+@media (max-width: 575px) {
+  .o-banner__box {
+    padding: 0;
+  }
+}
+.o-banner__content {
+  padding: 4rem 3rem 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .o-banner__content {
+    padding: 4rem 3rem 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 43vh;
+  }
+}
+@media (max-width: 575px) {
+  .o-banner__content {
+    padding: 4rem 1rem;
+    margin-top: 29vh;
+  }
+}
+.o-banner__content img {
+  max-width: 340px;
+  margin-bottom: 1rem;
+}
+@media (max-width: 575px) {
+  .o-banner__content img {
+    max-width: 200px;
+  }
+}
+@media (max-width: 1024px) {
+  .o-banner__content h4 {
+    color: white;
+  }
+}
+@media (max-width: 1024px) {
+  .o-banner__content .btn-outlined {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+  }
+}
+
+.o-halloween {
+  background-image: url(../assets/img/Halloween_LandingPage_Header_Desktop_2000x1000.webp);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 3rem 0 4rem 0;
+  margin: 3rem 0rem;
+}
+@media (max-width: 575px) {
+  .o-halloween {
+    background-image: url(../assets/img/Halloween_LandingPage_Header_Mobile_1024x1024.webp);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    padding: 1rem 0 3rem 0;
+  }
+}
+.o-halloween::before {
+  bottom: 0;
+  height: 100%;
+  top: initial;
+  background: linear-gradient(#030328 0%, rgba(3, 3, 40, 0) 10%, rgba(3, 3, 40, 0) 85%, #030328 100%);
+  content: "";
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+.o-halloween__box {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+@media (max-width: 1024px) {
+  .o-halloween__box {
+    max-width: 720px;
+  }
+}
+@media (max-width: 575px) {
+  .o-halloween__box {
+    padding: 10px;
+  }
+}
+.o-halloween__content {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  column-gap: 0rem;
+  width: 100%;
+}
+@media (max-width: 575px) {
+  .o-halloween__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.o-halloween__text {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  text-align: center;
+  z-index: 50;
+}
+.o-halloween__text h2 {
+  color: white;
+  font-size: 42px;
+  font-weight: 400;
+}
+@media (max-width: 1024px) {
+  .o-halloween__text h2 {
+    margin-bottom: 0.5rem;
+    font-size: 40px;
+  }
+}
+@media (max-width: 575px) {
+  .o-halloween__text h2 {
+    margin-bottom: 0.5rem;
+    font-size: 30px;
+  }
+}
+.o-halloween__text p {
+  color: white;
+}
+.o-halloween__movies {
+  padding: 0% 3%;
+  z-index: 50;
+}
+@media (max-width: 575px) {
+  .o-halloween__movies {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.o-halloween__movies img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 575px) {
+  .o-halloween__movies-desktop {
+    display: none;
+  }
+}
+@media (min-width: 1025px) {
+  .o-halloween__movies-mobile {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .o-halloween__movies-mobile {
+    display: none;
+  }
+}
+@media (max-width: 575px) {
+  .o-halloween__movies-mobile {
+    display: block;
+  }
+}
+.o-halloween__movies-title {
+  flex-direction: column;
+  margin-top: -28%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+@media (max-width: 1024px) {
+  .o-halloween__movies-title {
+    margin-top: -30%;
+  }
+}
+@media (max-width: 575px) {
+  .o-halloween__movies-title {
+    margin-top: 0;
+  }
+}
+.o-halloween__movies-title h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0;
+}
+@media (max-width: 1024px) {
+  .o-halloween__movies-title h3 {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 575px) {
+  .o-halloween__movies-title h3 {
+    font-size: 1.2rem;
+    margin-top: 0rem;
+  }
+}
+.o-halloween__movies-title p {
+  font-size: 0.8rem;
+  color: white;
+  margin-top: 0;
+}
+@media (max-width: 1024px) {
+  .o-halloween__movies-title p {
+    font-size: 0.6rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 575px) {
+  .o-halloween__movies-title p {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+}
+.o-halloween__series {
+  padding: 0% 3%;
+  z-index: 50;
+}
+@media (max-width: 575px) {
+  .o-halloween__series {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.o-halloween__series img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 575px) {
+  .o-halloween__series-desktop {
+    display: none;
+  }
+}
+@media (min-width: 1025px) {
+  .o-halloween__series-mobile {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .o-halloween__series-mobile {
+    display: none;
+  }
+}
+@media (max-width: 575px) {
+  .o-halloween__series-mobile {
+    display: block;
+  }
+}
+.o-halloween__series-title {
+  flex-direction: column;
+  margin-top: -28%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+@media (max-width: 1024px) {
+  .o-halloween__series-title {
+    margin-top: -30%;
+  }
+}
+@media (max-width: 575px) {
+  .o-halloween__series-title {
+    margin-top: 0;
+  }
+}
+.o-halloween__series-title h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0;
+}
+@media (max-width: 1024px) {
+  .o-halloween__series-title h3 {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 575px) {
+  .o-halloween__series-title h3 {
+    font-size: 1.2rem;
+    margin-top: 0rem;
+  }
+}
+.o-halloween__series-title p {
+  font-size: 0.8rem;
+  color: white;
+  margin-top: 0;
+}
+@media (max-width: 1024px) {
+  .o-halloween__series-title p {
+    font-size: 0.6rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 575px) {
+  .o-halloween__series-title p {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+}
+.o-halloween__kids {
+  padding: 0% 3%;
+  z-index: 50;
+}
+@media (max-width: 575px) {
+  .o-halloween__kids {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.o-halloween__kids img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 575px) {
+  .o-halloween__kids-desktop {
+    display: none;
+  }
+}
+@media (min-width: 1025px) {
+  .o-halloween__kids-mobile {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .o-halloween__kids-mobile {
+    display: none;
+  }
+}
+@media (max-width: 575px) {
+  .o-halloween__kids-mobile {
+    display: block;
+  }
+}
+.o-halloween__kids-title {
+  flex-direction: column;
+  margin-top: -28%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+@media (max-width: 1024px) {
+  .o-halloween__kids-title {
+    margin-top: -30%;
+  }
+}
+@media (max-width: 575px) {
+  .o-halloween__kids-title {
+    margin-top: 0;
+  }
+}
+.o-halloween__kids-title h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0;
+}
+@media (max-width: 1024px) {
+  .o-halloween__kids-title h3 {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 575px) {
+  .o-halloween__kids-title h3 {
+    font-size: 1.2rem;
+    margin-top: 0rem;
+  }
+}
+.o-halloween__kids-title p {
+  font-size: 0.8rem;
+  color: white;
+  margin-top: 0;
+}
+@media (max-width: 1024px) {
+  .o-halloween__kids-title p {
+    font-size: 0.6rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 575px) {
+  .o-halloween__kids-title p {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.btn-outlined {
+  cursor: pointer;
+  border: 2px solid #000000;
+  color: #000000;
+  background-color: transparent;
+  padding: 0px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  padding: 0.55em 1.5em 0.5em;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+
+.btn-main {
+  cursor: pointer;
+  background: linear-gradient(345deg, rgb(73, 12, 176) 0%, rgb(155, 52, 239) 33%, rgba(255, 255, 255, 0) 66%, rgba(255, 255, 255, 0) 100%) 99% 50%/400% 400%;
+  border: 2px solid transparent;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  transition: all 0.5s ease 0s !important;
+  font-size: 16px;
+}
+.btn-main:hover {
+  background-position: 1% 50%;
+  border: 2px solid rgb(198, 0, 255);
+  color: rgb(255, 255, 255);
+  transition: all 0.5s ease 0s !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.separador {
+  margin-top: 1.5rem;
+  margin-bottom: 1.2rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #585858;
+  border-width: 1px;
+  width: 200px;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/*# sourceMappingURL=style.css.map */

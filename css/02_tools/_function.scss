@@ -1,0 +1,28 @@
+/* Calculo de pixeles a rem*/
+
+@function size($pixel: 1, $unit: rem){
+    @return calc($pixel / 16) + $unit
+};
+
+
+$s-mobile: 575px;
+$s-tablet: 1024px;
+$lg-desktop:1025px;
+
+
+
+@mixin s-mediaq ($mq__max-w) {
+    @media (max-width: $mq__max-w) {
+        @content;        
+    }
+}
+
+@mixin lg-mediaq ($mq__min-w) {
+    @media (min-width: $mq__min-w) {
+        @content;        
+    }
+}
+
+
+
+

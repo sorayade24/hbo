@@ -1,0 +1,76 @@
+.o-banner{
+    background-image: url(../assets/img/desktop_1.webp);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    @include s-mediaq($s-tablet){
+        background-color: #000;
+        background-position: top center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(../assets/img/mobile.webp);
+    }
+    @include s-mediaq($s-mobile){
+        background-size: contain;
+    }
+   
+    &__box{
+        padding: 1rem;
+        flex-direction: row-reverse;
+        display: flex;
+        max-width: 1140px;
+
+        @include s-mediaq($s-tablet){
+            padding: 4rem;
+            flex-direction: column;
+        }
+
+        @include s-mediaq($s-mobile){
+            padding: 0;
+        }
+    }
+
+    &__content{
+        padding: 4rem 3rem 1rem 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include s-mediaq($s-tablet){
+            padding: 4rem 3rem 1rem 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 43vh;
+        }
+
+        @include s-mediaq($s-mobile){
+            padding: 4rem 1rem;
+            margin-top: 29vh;
+         }
+
+        & img{
+            max-width: 340px;
+            margin-bottom: 1rem;
+            @include s-mediaq($s-mobile){
+                max-width: 200px;
+             }
+        }
+
+        & h4{
+            @include s-mediaq($s-tablet){
+                color: white;
+            }
+        }
+
+        & .btn-outlined{
+            @include s-mediaq($s-tablet){
+                background-color: transparent;
+                color: rgb(255, 255, 255);
+                border: 2px solid rgb(255, 255, 255);
+            }
+        }
+    }
+}
