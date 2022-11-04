@@ -4,7 +4,7 @@
     @return calc($pixel / 16) + $unit
 };
 
-
+$xs-mobile:511px;
 $s-mobile: 575px;
 $s-tablet: 1024px;
 $lg-desktop:1025px;
@@ -23,6 +23,12 @@ $lg-desktop:1025px;
     }
 }
 
+@mixin xs-mediaq ($mq__max-w) {
+    @media (max-width: $mq__max-w) {
+         @content;        
 
+    }
+
+}
 
 

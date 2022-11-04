@@ -3,6 +3,12 @@ body{
     margin: 0;
 }
 
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 button {
     font-family: "Gilroy";
     font-size: 0.75rem;

@@ -21,6 +21,7 @@
         flex-direction: row-reverse;
         display: flex;
         max-width: 1140px;
+        margin: 0 auto;
 
         @include s-mediaq($s-tablet){
             padding: 4rem;
