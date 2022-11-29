@@ -1,4 +1,9 @@
- ITCSS / BEM
+// Réplica de 3 secciones de la página HBO MAX, utilizando Flex, Grid y SASS
+
+https://sorayade24.github.io/hbo/
+
+
+Para este proyecto se ha utilizado la arquitectura ITCSS  y la nomenclatura BEM.
 
 01  - settings
 
